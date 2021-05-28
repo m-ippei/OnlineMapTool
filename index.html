@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>グラフアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body oncontextmenu="return false;">
+    <canvas id="canvas0"></canvas>
+    <canvas id="canvas1"></canvas>
+    <div class="contextmenu" id="contextmenu0">
+        <input type="text" id="UIv1" class="uitext" placeholder="新しいラベル名をここに入力">
+        <button onclick="g.hc.NodeAdd()">
+            追加
+        </button>
+        <button onclick="g.download_JSON()">
+            ダウンロード
+        </button>
+        <button onclick="g.switch_expands()">
+            スクロール切替
+        </button>
+        <button onclick="g.removeAll()">
+            すべて消去
+        </button>
+        <input type="file" id="FileRead" class="uiinput">
+        <button onclick="g.openManual()">
+            使い方
+        </button>
+        <button onclick="g.openAbout()">
+            このアプリについて
+        </button>
+        <button onclick="g.hc.close()">
+            閉じる
+        </button>
+    </div>
+    <div class="contextmenu" id="list_contextmenu">
+        <button onclick="g.hc.editTitle()">
+            タイトルを編集
+        </button>
+        <button onclick="g.hc.NodeDelete()">
+            削除
+        </button>
+        <button onclick="g.hc.close()">
+            閉じる
+        </button>
+    </div>
+    <ul id="ul0"></ul>
+    <script src="./JSON_DRAWER/JSON_DRAWER.js" type="module"></script>
+    <script src="./JSON_DRAWER/setDrawNode.js" type="module"></script>
+    <script src="./Controller/canvasController.js" type="module"></script>
+    <script src="./Controller/HandleController.js" type="module"></script>
+    <script src="./Controller/moveController.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
